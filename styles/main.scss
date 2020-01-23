@@ -1,0 +1,30 @@
+@import './variables';
+@import './buttons';
+
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    font-family: 'Varela Round', sans-serif;
+}
+.header {
+    align-items: center;
+    background-color: $header-background;
+    color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    h1 {
+        margin: 0; 
+    }
+}
+
+.main {
+    background-color: #fff;
+    border-radius: 7px;
+    box-sizing: border-box;
+    overflow: hidden;
+    width:1140px;
+    
+}
