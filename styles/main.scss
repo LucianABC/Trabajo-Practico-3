@@ -1,5 +1,6 @@
 @import './variables';
 @import './buttons';
+@import './employeesList';
 
 
 body {
@@ -8,23 +9,45 @@ body {
     justify-content: center;
     font-family: 'Varela Round', sans-serif;
 }
-.header {
-    align-items: center;
-    background-color: $header-background;
-    color: #f5f5f5;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    h1 {
-        margin: 0; 
-    }
-}
 
-.main {
+.all {
     background-color: #fff;
-    border-radius: 7px;
+    border-radius: 4px;
     box-sizing: border-box;
+    margin: 20px;
     overflow: hidden;
     width:1140px;
+    .header {
+        align-items: center;
+        background-color: $header-background;
+        color: #f5f5f5;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+        h1 {
+            font-weight: lighter;
+            margin: 0; 
+        }
+    }
     
+    .mainSection{
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        
+        .searchBar {
+            align-self: flex-end;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: 'Varela Round', sans-serif;
+            height: 25px;
+            margin-bottom: 15px;
+            padding: 4px;
+            justify-self: right;
+            width: 350px;
+            
+        }
+    }
 }

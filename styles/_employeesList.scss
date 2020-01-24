@@ -1,0 +1,51 @@
+.employees-list {
+    box-sizing: border-box;
+    font-size: 13px;
+    color: $text-color;
+    text-align: left;
+
+    tr {   
+        th{
+            box-sizing: border-box;
+            padding: 0px;
+            text-align: left;
+            &:first-child{
+                padding: 15px;
+                padding-top: 12px;
+                padding-bottom: 12px; 
+                width: 30px;
+                span {
+                    padding: 0;
+                    width: 60px;
+                    input {
+                        padding:0;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                width: 185px;
+
+            }
+            
+            &:nth-child(3) {
+                width: 360px;
+
+            }
+            
+            &:nth-child(4) {
+                width: 178px;
+
+            }
+            
+            &:nth-child(5) {
+                width: 199px;
+
+            }
+            &:nth-child(6) {
+                width: 100px;
+
+            }
+            
+        }
+    }
+}
