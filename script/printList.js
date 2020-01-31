@@ -33,14 +33,24 @@ const printList = (list) => {
 
         let actionsTh= document.createElement("th");
         actionsTh.classList = "action-th"
+        
         let spanDelete = document.createElement("span");
         spanDelete.innerHTML = `<i class="fa fa-trash"></i>`;
+        spanDelete.addEventListener("click",()=>{
+            let employeeTh = spanDelete.parentElement;
+            employeeTh.parentNode.removeChild(employeeTh);
+            deleteEmployee(employee.id);
+        })
+
         let spanEdit = document.createElement("span");
         spanEdit.innerHTML = `<i class="fa fa-edit"></i>`;
+        spanEdit.addEventListener("click", ()=>{
+            editEmployee();
+        })
+        
         actionsTh.appendChild(spanDelete);
         actionsTh.appendChild(spanEdit);
         tr.appendChild(actionsTh);
-        
         employeeListHTML.appendChild(tr);
     })
 
