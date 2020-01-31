@@ -1,0 +1,1 @@
+//Aca va el get ( el de todos y el individual)
