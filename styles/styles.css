@@ -106,4 +106,7 @@ body {
   width: 350px;
 }
 
+.action-th {
+  display: flex;
+}
 /*# sourceMappingURL=styles.css.map */

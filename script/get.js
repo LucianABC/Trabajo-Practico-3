@@ -3,10 +3,13 @@
 
 const getEmployees = async() =>{
     try {
-        const data = await axios.get(baseUrl);
+        const data = await axios.get(`${baseUrl}/users`);
         employeeList = data.data;
+        console.log(data);
         printList(employeeList);
     }catch(err){
-        handleError
+        handleError(err);
     }  
 };
+
+getEmployees();

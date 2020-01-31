@@ -4,4 +4,4 @@ const handleError = err =>{
     alert(`Hubo un error. ${err}`);
 };
 
-const employeeList = [ ];
+let employeeList = [];
