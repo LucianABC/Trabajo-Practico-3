@@ -37,8 +37,7 @@ const printList = (list) => {
         let spanDelete = document.createElement("span");
         spanDelete.innerHTML = `<i class="fa fa-trash"></i>`;
         spanDelete.addEventListener("click",()=>{
-            let employeeTh = spanDelete.parentElement;
-            employeeTh.parentNode.removeChild(employeeTh);
+            tr.parentNode.removeChild(tr);
             deleteEmployee(employee.id);
         })
 
