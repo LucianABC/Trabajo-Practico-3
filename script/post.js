@@ -4,7 +4,7 @@ const fullnameid = document.querySelector("#fullname");
 const emailid = document.querySelector("#email");
 const adressid = document.querySelector("#adress");
 const phoneid = document.querySelector("#phone");
-const createTodos = async (fullname, email, adresss, phone) => {
+const createEmployee = async (fullname, email, adresss, phone) => {
   newfullname=fullnameid.value
   newemail=emailid.value
   newadresss=adresssid.value
