@@ -1,0 +1,67 @@
+.card {
+    background-color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    overflow: hidden;
+    width: 35%;
+    .card-header {
+        align-items: center;
+        border-bottom: 1px solid $card-borders;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        h2 {
+            margin: 0px;
+        }
+    }
+    .card-body {
+        padding: 30px;
+        div {
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+            label {
+                width:100%;
+            }
+            input{
+                box-sizing: border-box;
+                width: 100%;
+                height: 30px;
+            } 
+            .input-address {
+                height:150px;
+            }
+        }
+    }
+    .card-footer {
+        background-color: $card-footer;
+        border-top: 1px solid $card-borders;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;
+        padding:20px;
+        height: 30%;
+        width: 100%;
+        button {
+            height: 35px;
+            margin: 7px;
+            width: 90px;
+        }
+
+    }
+}
+.modal {
+    align-items: center;
+    background-color: black;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    opacity: 1;
+    padding: 40px;
+    width: 100%;
+    z-index: 100;
+}
