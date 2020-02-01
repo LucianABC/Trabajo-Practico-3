@@ -44,7 +44,7 @@ const printList = (list) => {
         let spanEdit = document.createElement("span");
         spanEdit.innerHTML = `<i class="fa fa-edit"></i>`;
         spanEdit.addEventListener("click", ()=>{
-            editEmployee();
+               openModal("modify-employee");
         })
         
         actionsTh.appendChild(spanDelete);

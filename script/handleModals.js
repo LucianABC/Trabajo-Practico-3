@@ -1,16 +1,15 @@
-//Abrir modal create
-const openAddModal = document.querySelector("#addBttn");
 
 const modal = document.querySelector(".modal");
 
-openAddModal.addEventListener("click", () => {
-  const addCard = document.querySelector("#add-employee");
-  modal.classList.add("display");
-  addCard.classList.add("display");
-});
+//Abrir modal 
 
-//Cerrar modal create 
+const openModal = (openCard) => {
+    let card = document.querySelector(`#${openCard}`);
+    modal.classList.add("display");
+    card.classList.add("display");
+}
 
+//Cerrar modals 
 const closeButtons = document.querySelectorAll(".closeBttn");
 
 closeButtons.forEach(button => {

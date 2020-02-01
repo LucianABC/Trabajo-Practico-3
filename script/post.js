@@ -1,5 +1,8 @@
 //Acá va el post
-
+const openAddModal = document.querySelector("#addBttn");
+openAddModal.addEventListener("click", () => {
+    openModal("add-employee");
+});
 
 const fullnameid = document.querySelector("#add-name");
 const emailid = document.querySelector("#add-email");
