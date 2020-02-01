@@ -18,14 +18,13 @@ const createEmployee = async () => {
 
   let user = {
     fullname,
-    email,
+    email,  
     address,
     phone
   };
 
   try {
     const res = await axios.post(baseUrl, user);
-    console.log(res);
     employeeList.push(res.data);
     printList(employeeList);
   } catch (err) {
@@ -34,6 +33,4 @@ const createEmployee = async () => {
 };
 
 const submitBttn = document.querySelector("#submitAdd");
-submitBttn.addEventListener("click", ()=>{
-  createEmployee();
-});
+submitBttn.addEventListener("click", createEmployee);

@@ -1,4 +1,11 @@
+
+const fullnameUpd = document.querySelector("#update-fullname");
+const emailUpd = document.querySelector("#update-email");
+const addressUpd = document.querySelector("#update-address");
+const phoneUpd = document.querySelector("#update-phone")
+
 const employeeListHTML = document.querySelector(".employees-list-body");
+
 const printList = (list) => {
 
     employeeListHTML.innerHTML = "";
@@ -44,7 +51,11 @@ const printList = (list) => {
         let spanEdit = document.createElement("span");
         spanEdit.innerHTML = `<i class="fa fa-edit"></i>`;
         spanEdit.addEventListener("click", ()=>{
-               openModal("modify-employee");
+            openModal("modify-employee");
+            fullnameUpd.value = employee.fullname;
+            emailUpd.value= employee.email;
+            addressUpd.value=employee.address;
+            phoneUpd.value=employee.phone;    
         })
         
         actionsTh.appendChild(spanDelete);
