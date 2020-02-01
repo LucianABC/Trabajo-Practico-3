@@ -4,31 +4,36 @@ openAddModal.addEventListener("click", () => {
     openModal("add-employee");
 });
 
+
 const fullnameid = document.querySelector("#add-name");
 const emailid = document.querySelector("#add-email");
-const adressid = document.querySelector("#add-adress");
+const addressid = document.querySelector("#add-address");
 const phoneid = document.querySelector("#add-phone");
 
-const createEmployee = async (fullname, email, adresss, phone) => {
-  newfullname = fullnameid.value;
-  newemail = emailid.value;
-  newadresss = adresssid.value;
-  newphone = phoneid.value;
+const createEmployee = async () => {
+  let fullname = fullnameid.value;
+  let email = emailid.value;
+  let address = addressid.value;
+  let phone = phoneid.value;
 
-  let data = {
+  let user = {
     fullname,
     email,
-    adresss,
+    address,
     phone
   };
 
   try {
-    const res = await axios.post(baseUrl, data);
+    const res = await axios.post(baseUrl, user);
+    console.log(res);
     employeeList.push(res.data);
+    printList(employeeList);
   } catch (err) {
     handleError(err);
   }
 };
 
 const submitBttn = document.querySelector("#submitAdd");
-submitBttn.addEventListener("click", createEmployee);
+submitBttn.addEventListener("click", ()=>{
+  createEmployee();
+});
