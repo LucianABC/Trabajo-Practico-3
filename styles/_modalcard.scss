@@ -19,6 +19,13 @@
             font-weight: normal;
             margin: 0px;
         }
+        i{
+            color: #cfccc6;
+            cursor:pointer;
+            &:hover {
+                color: #636363;
+            }
+        }
     }
     .card-body {
         padding: 20px;

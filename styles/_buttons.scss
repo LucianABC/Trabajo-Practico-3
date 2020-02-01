@@ -25,17 +25,14 @@
     }
 }
 
-.cancelBttn {
-    
+.cancelBttn {    
     color: #333;
     background-color: #fff;
     border: 1px solid #ccc;
-    &:hover {
-            
+    &:hover {            
         background-color: #e6e6e6;
         border-color: #adadad;
     }
-
 }
  
 .submitBttn {
