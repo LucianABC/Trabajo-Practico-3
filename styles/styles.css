@@ -44,6 +44,8 @@
 
 .employees-list {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   font-size: 13px;
   text-align: left;
 }
@@ -80,12 +82,38 @@
 .employees-list tr th:nth-child(6) {
   width: 100px;
 }
+.employees-list .employees-list-body .employees-list-item {
+  align-items: center;
+  display: flex;
+  font-weight: normal;
+}
+.employees-list .employees-list-body .employees-list-item th {
+  font-weight: normal;
+}
+.employees-list .employees-list-body .employees-list-item th:nth-child(6) {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  width: 100px;
+}
+.employees-list .employees-list-body .employees-list-item th:nth-child(6) span {
+  justify-content: center;
+  box-sizing: border-box;
+  display: flex;
+  width: 40%;
+  margin: 0;
+}
+.employees-list .employees-list-body .employees-list-item th:nth-child(6) i {
+  cursor: pointer;
+  font-size: 17px;
+  margin: 0;
+}
 
 .modal {
   align-items: center;
   background-color: #00000054;
   box-sizing: border-box;
-  display: flex;
+  display: none;
   height: 100%;
   justify-content: center;
   opacity: 1;
@@ -181,7 +209,6 @@ body {
   background-color: #fff;
   border-radius: 4px;
   box-sizing: border-box;
-  display: none;
   margin: 20px;
   overflow: hidden;
   width: 1140px;

@@ -50,6 +50,8 @@ const printList = (list) => {
         actionsTh.appendChild(spanDelete);
         actionsTh.appendChild(spanEdit);
         tr.appendChild(actionsTh);
+
+        tr.classList.add("employees-list-item");
         employeeListHTML.appendChild(tr);
     })
 
