@@ -3,11 +3,9 @@ const fullnameUpd = document.querySelector("#update-fullname");
 const emailUpd = document.querySelector("#update-email");
 const addressUpd = document.querySelector("#update-address");
 const phoneUpd = document.querySelector("#update-phone")
-
 const employeeListHTML = document.querySelector(".employees-list-body");
 
 const printList = (list) => {
-
     employeeListHTML.innerHTML = "";
     list.map(employee=>{ 
         
@@ -55,7 +53,8 @@ const printList = (list) => {
             fullnameUpd.value = employee.fullname;
             emailUpd.value= employee.email;
             addressUpd.value=employee.address;
-            phoneUpd.value=employee.phone;    
+            phoneUpd.value=employee.phone;
+            currentId = employee.id;     
         })
         
         actionsTh.appendChild(spanDelete);

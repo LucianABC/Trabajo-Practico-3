@@ -1,22 +1,22 @@
 //Aca iria el PUT
+const editEmployee = async (id, fullname, email, address, phone) => {
 
-
-const editEmployee = async ( fullname, email, address, phone) => {
-    let data = {
-        fullname, 
-        email, 
-        address, 
-        phone
-    };
-    try{
-        const employee = await axios.put(`${baseUrl}:${id}`, data)
+    try{            
+        let info = {
+            id,
+            fullname, 
+            email, 
+            address, 
+            phone
+        };
+        const employee = await axios.put(`${baseUrl}${id}`, info)//Como le pasamos el id?
         for ( let i=0; i < employeeList.length; i++) {
             if ( employeeList[i].id == id) {
                 employeeList[i] = employee.data;
             }
         }
 
-        printList(employeeList);
+       getEmployees();
     }
     catch (err){
         handleError(err);
@@ -25,5 +25,5 @@ const editEmployee = async ( fullname, email, address, phone) => {
 
 const submitUpdtButton = document.querySelector("#submitUpdt");
 submitUpdtButton.addEventListener("click", ()=>{
-    editEmployee(fullnameUpd.value, emailUpd.value, addressUpd.value, phoneUpd.value)
+    editEmployee(currentId, fullnameUpd.value, emailUpd.value, addressUpd.value, phoneUpd.value);
 });
