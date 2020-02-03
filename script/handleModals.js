@@ -8,18 +8,28 @@ const openModal = (openCard) => {
     modal.classList.add("display");
     card.classList.add("display");
 }
-const closeModal = (close) => {
 
+
+
+//Cerrar modals 
+const closeModal = (close) => {
     modal.classList.remove("display");
     close.classList.remove("display");
 }
-//Cerrar modals 
-const closeButtons = document.querySelectorAll(".closeBttn");
 
+
+const closeButtons = document.querySelectorAll(".closeBttn");
 closeButtons.forEach(button => {
     button.addEventListener("click", ()=>{
-        let form = button.parentElement;
-        form = form.parentElement;
+        let form = button.parentElement.parentElement;;
         closeModal(form);
     });
+});
+
+const cancelButtons = document.querySelectorAll(".cancelBttn");
+cancelButtons.forEach(button => {
+    button.addEventListener("click", ()=>{
+        let form = button.parentElement.parentElement;
+        closeModal(form);
+    })
 });
