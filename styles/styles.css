@@ -59,7 +59,7 @@
 .employees-list tr th {
   display: flex;
   box-sizing: border-box;
-  padding: 0px;
+  padding: 10px;
   text-align: left;
   width: 100%;
 }
