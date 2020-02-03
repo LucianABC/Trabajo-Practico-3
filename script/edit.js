@@ -18,6 +18,13 @@ const editEmployee = async (id, fullname, email, address, phone) => {
 }
 
 const submitUpdtButton = document.querySelector("#submitUpdt");
-submitUpdtButton.addEventListener("click", ()=>{
-    editEmployee(currentId, fullnameUpd.value, emailUpd.value, addressUpd.value, phoneUpd.value);
+submitUpdtButton.addEventListener("click", async()=>{
+   await editEmployee(currentId, 
+                    fullnameUpd.value,
+                    emailUpd.value,
+                    addressUpd.value,
+                    phoneUpd.value);
+    let card = submitUpdtButton.parentElement.parentElement;
+    closeModal(card);
+
 });

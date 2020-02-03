@@ -25,12 +25,19 @@ const createEmployee = async () => {
 
   try {
     const res = await axios.post(baseUrl, user);
-    employeeList.push(res.data);
-    printList(employeeList);
+    getEmployees();
+    fullnameid.value="";
+    emailid.value="";  
+    addressid.value="";
+    phoneid.value="";
   } catch (err) {
     handleError(err);
   }
 };
 
 const submitBttn = document.querySelector("#submitAdd");
-submitBttn.addEventListener("click", createEmployee);
+submitBttn.addEventListener("click", async()=>{
+  await createEmployee();  
+  let card = submitBttn.parentElement.parentElement;
+  closeModal(card);
+});

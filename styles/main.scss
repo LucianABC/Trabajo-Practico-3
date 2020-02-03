@@ -18,11 +18,9 @@ body {
 }
 
 .all {
-    background-color: #fff;
     border-radius: 4px;
     box-sizing: border-box;
     margin: 20px;
-    overflow: hidden;
     width:1140px;
     .header {
         align-items: center;
@@ -40,6 +38,8 @@ body {
     }
     
     .mainSection{
+        
+    background-color: #fff;
         padding: 25px;
         display: flex;
         flex-direction: column;
