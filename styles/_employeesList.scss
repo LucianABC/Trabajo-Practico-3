@@ -69,11 +69,42 @@
             align-items: center;
             display: flex;
             font-weight: normal;
-            th{
-                
+            .th-checkbox {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .label-checkbox {
+                    border: 2px solid $text-color;
+                    border-radius: 3px;
+                    box-sizing: border-box;
+                    display: flex;
+                    height: 22px;
+                    position: absolute;
+                    width: 22px;
+                    
+                    .fa-check-square{
+                        bottom: 4px;
+                        display: none;
+                        font-size:24px;
+                        left: -1px;
+                        position: relative;
+                    } 
+                    input { 
+                        display: none;
+                        &:checked  ~  .fa-check-square {
+                                display: block;
+                            
+                        } 
+                        &:checked .label-checkbox {
+                            background-color: $text-color;
+                        }
+                    }
+                }
+            }
+            th{                 
                 font-weight: normal;
+               
                 &:nth-child(6) {
-                  
                     .fa{
                         cursor: pointer;
                         font-size: 20px;

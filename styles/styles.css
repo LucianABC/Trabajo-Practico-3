@@ -103,6 +103,36 @@
   display: flex;
   font-weight: normal;
 }
+.employees-list .employees-list-body .employees-list-item .th-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.employees-list .employees-list-body .employees-list-item .th-checkbox .label-checkbox {
+  border: 2px solid #566787;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: flex;
+  height: 22px;
+  position: absolute;
+  width: 22px;
+}
+.employees-list .employees-list-body .employees-list-item .th-checkbox .label-checkbox .fa-check-square {
+  bottom: 4px;
+  display: none;
+  font-size: 24px;
+  left: -1px;
+  position: relative;
+}
+.employees-list .employees-list-body .employees-list-item .th-checkbox .label-checkbox input {
+  display: none;
+}
+.employees-list .employees-list-body .employees-list-item .th-checkbox .label-checkbox input:checked ~ .fa-check-square {
+  display: block;
+}
+.employees-list .employees-list-body .employees-list-item .th-checkbox .label-checkbox input:checked .label-checkbox {
+  background-color: #566787;
+}
 .employees-list .employees-list-body .employees-list-item th {
   font-weight: normal;
 }

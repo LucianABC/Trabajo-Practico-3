@@ -9,13 +9,7 @@ const editEmployee = async (id, fullname, email, address, phone) => {
             address, 
             phone
         };
-        const employee = await axios.put(`${baseUrl}${id}`, info)//Como le pasamos el id?
-        for ( let i=0; i < employeeList.length; i++) {
-            if ( employeeList[i].id == id) {
-                employeeList[i] = employee.data;
-            }
-        }
-
+        const employee = await axios.put(`${baseUrl}${id}`, info)//Como le pasamos el id?w
        getEmployees();
     }
     catch (err){

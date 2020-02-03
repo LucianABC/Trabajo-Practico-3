@@ -4,6 +4,7 @@ const emailUpd = document.querySelector("#update-email");
 const addressUpd = document.querySelector("#update-address");
 const phoneUpd = document.querySelector("#update-phone")
 const employeeListHTML = document.querySelector(".employees-list-body");
+let currentId;
 
 const printList = (list) => {
     employeeListHTML.innerHTML = "";
@@ -12,12 +13,16 @@ const printList = (list) => {
         let tr = document.createElement("tr");
         let checkboxTh= document.createElement("th");
 
-        let span = document.createElement("span");
+        let label = document.createElement("label");
         let checkbox= document.createElement("input");
         checkbox.type="checkbox";
-        span.appendChild(checkbox);
-        checkboxTh.appendChild(span);        
-        checkboxTh.classList.add="th-checkbox";        
+        label.classList.add("label-checkbox");
+        let icon = document.createElement("i");
+        icon.className= `fa fa-check-square`;
+        label.appendChild(checkbox);
+        label.appendChild(icon);
+        checkboxTh.appendChild(label);        
+        checkboxTh.classList.add("th-checkbox");        
         tr.appendChild(checkboxTh);
 
         let nameTh= document.createElement("th");
@@ -55,7 +60,7 @@ const printList = (list) => {
             addressUpd.value=employee.address;
             phoneUpd.value=employee.phone;
             currentId = employee.id;     
-        })
+        });
         
         actionsTh.appendChild(spanDelete);
         actionsTh.appendChild(spanEdit);
