@@ -86,8 +86,12 @@
             border-width:1px;
             
             &:nth-child(odd) {
-                background-color: $bodybackground;
+                background-color: $item-background;
             }
+
+            &:hover{
+                background-color: $bodybackground;
+            } 
             th{                 
                 font-weight: normal;
                
