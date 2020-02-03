@@ -122,6 +122,9 @@
   font-weight: normal;
   border-width: 1px;
 }
+.employees-list .employees-list-body .employees-list-item:nth-child(odd) {
+  background-color: #f5f5f5;
+}
 .employees-list .employees-list-body .employees-list-item th {
   font-weight: normal;
 }
