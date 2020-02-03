@@ -85,7 +85,7 @@
   width: 22px;
 }
 .employees-list tr th:first-child .label-checkbox .fa-check-square {
-  bottom: 4px;
+  bottom: 3px;
   display: none;
   font-size: 26px;
   left: -1px;
