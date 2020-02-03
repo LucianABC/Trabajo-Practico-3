@@ -9,13 +9,14 @@ let currentId;
 const printList = (list) => {
     employeeListHTML.innerHTML = "";
     list.map(employee=>{ 
-        
         let tr = document.createElement("tr");
+        
         let checkboxTh= document.createElement("th");
 
         let label = document.createElement("label");
         let checkbox= document.createElement("input");
         checkbox.type="checkbox";
+        checkbox.className="checkbox";
         label.classList.add("label-checkbox");
         let icon = document.createElement("i");
         icon.className= `fa fa-check-square`;
