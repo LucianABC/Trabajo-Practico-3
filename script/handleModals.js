@@ -9,6 +9,11 @@ const openModal = (openCard) => {
     card.classList.add("display");
 }
 
+const openDltCard = (openDltCard) =>{
+    let dltCard = document.querySelector(`#${openDltCard}`);
+    modal.classList.add("display");
+    dltCard.classList.add("display");
+}
 //Cerrar modals 
 const closeButtons = document.querySelectorAll(".closeBttn");
 

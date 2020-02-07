@@ -14,7 +14,6 @@ const editEmployee = async (id, fullname, email, address, phone) => {
                 employeeList[i] = employee.data;
             }
         }
-
        getEmployees();
     }
     catch (err){
