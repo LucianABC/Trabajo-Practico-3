@@ -35,6 +35,16 @@
     background-color: #449d44;
     border: 1px solid #398439; }
 
+.deleteBttn {
+  background: #D9534F;
+  border: 1px solid #D9534F;
+  color: #e6e6e6;
+  cursor: pointer;
+  margin: 0 0 0 10px;
+  padding: 6px 12px; }
+  .deleteBttn:hover {
+    background-color: #B8413B; }
+
 .employees-list {
   box-sizing: border-box;
   display: flex;
@@ -169,19 +179,28 @@
 
 .modal-content {
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+  border-radius: 5px;
   box-sizing: border-box;
-  height: 240px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  margin: 30px;
   overflow: hidden;
   width: 400px; }
   .modal-content .modal-header {
+    align-items: center;
     border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
     padding: 20px 30px; }
     .modal-content .modal-header .modal-title {
       color: #566787;
       font-size: 18px;
       margin: 0; }
+    .modal-content .modal-header .fa {
+      color: #cfccc6;
+      cursor: pointer; }
+      .modal-content .modal-header .fa:hover {
+        color: #636363; }
   .modal-content .modal-body {
     padding: 20px 30px; }
     .modal-content .modal-body p {
@@ -192,15 +211,11 @@
       font-size: 10px; }
   .modal-content .modal-footer {
     background-color: #ECF0F1;
-    padding: 20px 30px;
-    display: flex; }
-    .modal-content .modal-footer .cancel-bttn {
-      padding: 6px 12px;
-      background: #ffffff; }
-    .modal-content .modal-footer .delete-bttn {
-      background: #D9534F;
-      margin: 0 0 0 5px;
-      padding: 6px 12px; }
+    border-top: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 30px; }
 
 html {
   height: 100%; }
@@ -215,7 +230,6 @@ body {
   margin: 0; }
 
 .all {
-  display: none;
   background-color: #fff;
   border-radius: 4px;
   box-sizing: border-box;

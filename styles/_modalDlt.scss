@@ -1,18 +1,29 @@
 .modal-content{
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: 3px;
+    border-radius: 5px;
     box-sizing: border-box;
-    height: 240px;
+    box-shadow:0 5px 15px rgba(0,0,0,.5);
+    flex-direction: column;
+    margin: 30px;
     overflow: hidden;
     width: 400px;
     .modal-header{
+        align-items: center;
         border-bottom: 1px solid #e5e5e5;
+        display: flex;
+        justify-content: space-between;
         padding: 20px 30px;
         .modal-title{
             color: #566787;
             font-size: 18px;
             margin: 0;
+        }
+        .fa{
+            color: #cfccc6;
+            cursor: pointer;
+            &:hover {
+                color: #636363;
+            }
         }
     }
     .modal-body{
@@ -28,17 +39,10 @@
     }
     .modal-footer{
         background-color: #ECF0F1;
-        padding: 20px 30px;
+        border-top: 1px solid $card-borders;
+        box-sizing: border-box;
         display: flex;
-        
-        .cancel-bttn{
-            padding: 6px 12px;
-            background: #ffffff;
-        }
-        .delete-bttn{
-            background: #D9534F;
-            margin: 0 0 0 5px;
-            padding: 6px 12px;
-        }
+        justify-content: flex-end;
+        padding: 20px 30px;
     }
 }

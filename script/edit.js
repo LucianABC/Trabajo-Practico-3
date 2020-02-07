@@ -1,6 +1,5 @@
 //Aca iria el PUT
 const editEmployee = async (id, fullname, email, address, phone) => {
-
     try{            
         let info = {
             id,

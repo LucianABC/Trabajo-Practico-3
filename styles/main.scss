@@ -3,6 +3,7 @@
 @import './employeesList';
 @import './modal';
 @import './modalcard';
+@import './modalDlt';
 
 html {
     height: 100%;
@@ -43,7 +44,6 @@ body {
         padding: 25px;
         display: flex;
         flex-direction: column;
-        
         .searchBar {
             align-self: flex-end;
             border: 1px solid #ccc;
