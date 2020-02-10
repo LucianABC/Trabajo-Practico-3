@@ -1,4 +1,6 @@
 //Aca va el delete
+
+
 const deleteEmployee = async id => {
     try {
       const res = await axios.delete(`${baseUrl}${id}`);
@@ -9,4 +11,5 @@ const deleteEmployee = async id => {
     } catch (err) {
       handleError(err);
     }
-};
+}; 
+

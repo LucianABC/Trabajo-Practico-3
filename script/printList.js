@@ -49,9 +49,12 @@ const printList = (list) => {
         spanDelete.innerHTML = `<i class="fa fa-trash"></i>`;
         spanDelete.addEventListener("click",()=>{
             openDltCard("delete-employee");
-            tr.parentNode.removeChild(tr);
-            deleteEmployee(employee.id);
-        })
+            const deleteBttn = document.querySelector(".deleteBttn");
+            deleteBttn.addEventListener("click", ()=>{        
+                tr.parentNode.removeChild(tr);
+                deleteEmployee(employee.id);
+            });
+        });
 
         let spanEdit = document.createElement("span");
         spanEdit.innerHTML = `<i class="fa fa-edit"></i>`;
