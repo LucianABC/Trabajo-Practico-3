@@ -9,5 +9,4 @@ const deleteEmployee = async id => {
     } catch (err) {
       handleError(err);
     }
-  };
-  
+};

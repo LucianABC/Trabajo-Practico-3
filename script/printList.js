@@ -48,6 +48,7 @@ const printList = (list) => {
         let spanDelete = document.createElement("span");
         spanDelete.innerHTML = `<i class="fa fa-trash"></i>`;
         spanDelete.addEventListener("click",()=>{
+            openDltCard("delete-employee");
             tr.parentNode.removeChild(tr);
             deleteEmployee(employee.id);
         })
@@ -62,7 +63,6 @@ const printList = (list) => {
             phoneUpd.value=employee.phone;
             currentId = employee.id;     
         });
-        
         actionsTh.appendChild(spanDelete);
         actionsTh.appendChild(spanEdit);
         tr.appendChild(actionsTh);

@@ -1,6 +1,5 @@
 //Aca iria el PUT
 const editEmployee = async (id, fullname, email, address, phone) => {
-
     try{            
         let info = {
             id,
@@ -8,11 +7,10 @@ const editEmployee = async (id, fullname, email, address, phone) => {
             email, 
             address, 
             phone
-        };
-        const employee = await axios.put(`${baseUrl}${id}`, info)//Como le pasamos el id?w
-       getEmployees();
-    }
-    catch (err){
+        };       
+    const employee = await axios.put(`${baseUrl}${id}`, info)//Como le pasamos el id?w
+    getEmployees();
+    }catch (err){
         handleError(err);
     }
 }
