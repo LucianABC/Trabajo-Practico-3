@@ -5,8 +5,7 @@ const deleteEmployee = async id => {
       const index = employeeList.findIndex(employee => {
         return employee.id == id;
       });
-      employeeList.splice(index, 1);
-      printList(employeeList);
+      getEmployees();
     } catch (err) {
       handleError(err);
     }

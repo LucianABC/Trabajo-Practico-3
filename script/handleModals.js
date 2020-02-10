@@ -15,14 +15,24 @@ const openDltCard = (openDltCard) =>{
     dltCard.classList.add("display");
 }
 //Cerrar modals 
-const closeButtons = document.querySelectorAll(".closeBttn");
+const closeModal = (close) => {
+    modal.classList.remove("display");
+    close.classList.remove("display");
+}
 
+
+const closeButtons = document.querySelectorAll(".closeBttn");
 closeButtons.forEach(button => {
     button.addEventListener("click", ()=>{
-        let form = button.parentElement;
-        form = form.parentElement;
-        form.classList.remove("display");
-
-        modal.classList.remove("display");
+        let form = button.parentElement.parentElement;;
+        closeModal(form);
     });
+});
+
+const cancelButtons = document.querySelectorAll(".cancelBttn");
+cancelButtons.forEach(button => {
+    button.addEventListener("click", ()=>{
+        let form = button.parentElement.parentElement;
+        closeModal(form);
+    })
 });
