@@ -8,8 +8,8 @@ const editEmployee = async (id, fullname, email, address, phone) => {
             address, 
             phone
         };       
-    const employee = await axios.put(`${baseUrl}${id}`, info)//Como le pasamos el id?w
-    getEmployees();
+       const employee = await axios.put(`${baseUrl}${id}`, info)//Como le pasamos el id?w
+        getEmployees();
     }catch (err){
         handleError(err);
     }
@@ -17,12 +17,14 @@ const editEmployee = async (id, fullname, email, address, phone) => {
 
 const submitUpdtButton = document.querySelector("#submitUpdt");
 submitUpdtButton.addEventListener("click", async()=>{
-   await editEmployee(currentId, 
-                    fullnameUpd.value,
-                    emailUpd.value,
-                    addressUpd.value,
-                    phoneUpd.value);
-    let card = submitUpdtButton.parentElement.parentElement;
-    closeModal(card);
-
+    if (validation(fullnameid) && validation(emailid)&&validation(addressid)){
+  
+        await editEmployee(currentId, 
+                            fullnameUpd.value,
+                            emailUpd.value,
+                            addressUpd.value,
+                            phoneUpd.value);
+            let card = submitUpdtButton.parentElement.parentElement;
+            closeModal(card);
+    }
 });

@@ -4,6 +4,7 @@ const emailUpd = document.querySelector("#update-email");
 const addressUpd = document.querySelector("#update-address");
 const phoneUpd = document.querySelector("#update-phone")
 const employeeListHTML = document.querySelector(".employees-list-body");
+
 let currentId;
 
 const printList = (list) => {

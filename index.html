@@ -46,7 +46,8 @@
         </article>
     </section>
     <section id="add" class="modal">
-        <div class="card" id="add-employee">
+        
+        <form class="card" id="add-employee">
             <header class="card-header">
                 <h2> Add employee</h2>
                 <i class="closeBttn fa fa-times"></i>
@@ -54,29 +55,32 @@
             <div class="card-body">
                 <div>
                     <label>Name</label>
-                    <input id="add-name" class ="input-name" type="text">
+                    <input id="add-name" class ="input-name" type="text" required
+                    minlength="4" maxlength="50">
                 </div>
                 <div>
                     <label>Email</label>
-                    <input id="add-email" class ="input-email"type="email">
+                    <input id="add-email" class ="input-email"type="email" required>
                 </div>
                 <div>
                     <label>Address</label>
-                    <input id="add-address"class ="input-address" type="text">
+                    <input id="add-address"class ="input-address" type="text" required
+                    minlength="4" maxlength="60">
                 </div>
                 <div>
                     <label>Phone</label>
-                    <input id="add-phone" class ="input-phone"type="text">
+                    <input id="add-phone" class ="input-phone"type="number" required>
                 </div>
 
             </div>
             <footer class="card-footer">
-                <button id="cancelAdd" class="button cancelBttn">Cancel</button>
-                <button id="submitAdd" class="button submitBttn" >Add</button>
+                <button id="cancelAdd" type="button" class="button cancelBttn">Cancel</button>
+                <button id="submitAdd" type="button" class="button submitBttn" >Add</button>
             </footer>
-        </div>
+        </form>
+
         <!--CARD DE MODIFY-->
-        <div class="card" id="modify-employee">
+        <form class="card" id="modify-employee">
             <header class="card-header">
                 <h2> Modify employee</h2>
                 <i class="closeBttn fa fa-times"></i>
@@ -84,29 +88,31 @@
             <div class="card-body">
                 <div>
                     <label>Name</label>
-                    <input id="update-fullname" class ="input-name" type="text">
+                    <input id="update-fullname" class ="input-name" type="text" required
+                    minlength="4" maxlength="50">
                 </div>
                 <div>
                     <label>Email</label>
-                    <input id="update-email" class ="input-email"type="email">
+                    <input type="email" id="update-email" class="input-email" required>
                 </div>
                 <div>
                     <label>Address</label>
-                    <input id="update-address"class ="input-address" type="text">
+                    <input id="update-address"class ="input-address" type="text" required
+                    minlength="4" maxlength="60">
                 </div>
                 <div>
                     <label>Phone</label>
-                    <input id="update-phone" class ="input-phone"type="text">
+                    <input id="update-phone" class ="input-phone"type="number" required>
                 </div>
 
             </div>
             <footer class="card-footer">
-                <button class="button cancelBttn" id="cancelUpdt">Cancel</button>
-                <button class="button submitBttn" id="submitUpdt">Add</button>
+                <button class="button cancelBttn" type="button" id="cancelUpdt">Cancel</button>
+                <button class="button submitBttn" type="button" id="submitUpdt">Add</button>
             </footer>
-        </div>
+        </form>
         <!--MENSAJE DE DELETE-->
-        <div id="delete-employee" class="modal-content">
+        <form id="delete-employee" class="modal-content">
             
                 <input id="userId" type="hidden" class="form-control" required value="2">
                 <header class="modal-header">
@@ -122,7 +128,7 @@
                     <input type="button" class="deleteBttn" value="Delete">
                 </footer>
             
-        </div>
+            </form>
     </section>
     <script src="script/variables.js"></script>
     <script src="script/printList.js"></script>
@@ -133,6 +139,7 @@
     <script src="script/delete.js"></script>
     <script src="script/check.js"></script>
     <script src="script/search.js"></script>
+    <script src="script/validation.js"></script>
 
 </body>
 </html>
