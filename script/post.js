@@ -12,15 +12,7 @@ const phoneid = document.querySelector("#add-phone");
 
 const createEmployee = async () => {
   
-  let user = {
-    fullname: "",
-    email: "",  
-    address: "",
-    phone: ""
-  };
-  
-  if (validation(fullnameid) && validation(emailid)&&validation(addressid)){
-    user= {
+  let user= {
       fullname: fullnameid.value,
       email: emailid.value,
       address:  addressid.value,
@@ -37,7 +29,7 @@ const createEmployee = async () => {
     } catch (err) {
         handleError(err);
     }
-  }
+  
 };
 
 const submitBttn = document.querySelector("#submitAdd");
