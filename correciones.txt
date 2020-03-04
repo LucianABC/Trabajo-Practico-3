@@ -1,0 +1,7 @@
+Para editar la url tiene que contener / y la id como se muestra los siguiente:
+const employee = await axios.put(`${baseUrl}/${id}`, info)
+
+Se recarga el form cuando haces el edit
+
+Hay let que podrian ser const como variables que se usan una sola vez,como cuando vas a pasar datos a la api.
+cuando creas un selector, y cuando vas a crear un array o un objeto.
